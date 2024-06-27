@@ -46,7 +46,7 @@ type (
 
 service ${apiName} {
   @handler ${apiName}Handler
-  ${httpMethod.toLowerCase()} /${endpoint} ( ${apiName}Req ) returns ( ${apiName}Resp )
+  ${httpMethod.toLowerCase()} ${endpoint} (${apiName}Req) returns (${apiName}Resp)
 }
     `;
   };
@@ -69,7 +69,7 @@ service ${apiName} {
 
   return (
       <div className="App">
-        <h1>Go-Zero API File Generator</h1>
+        <h1>go-zero API File Generator</h1>
         <form className="form-container">
           <div className="form-group">
             <label>API Name:</label>
