@@ -49,8 +49,8 @@ const App = () => {
 
   const generateApiFileContent = () => {
     const typeDefinitions = requests.map((req) => {
-      const inputTypeDefinition = req.inputFields.map(f => `    ${f.field}: ${f.type}`).join('\n');
-      const outputTypeDefinition = req.outputFields.map(f => `    ${f.field}: ${f.type}`).join('\n');
+      const inputTypeDefinition = req.inputFields.map(f => `    ${f.field} ${f.type}`).join('\n');
+      const outputTypeDefinition = req.outputFields.map(f => `    ${f.field} ${f.type}`).join('\n');
 
       return `
 type (
