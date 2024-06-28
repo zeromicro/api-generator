@@ -1,8 +1,10 @@
 .App {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
   font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
 }
 
 h1 {
@@ -15,6 +17,16 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.api-file-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  position: relative;
 }
 
 .form-group {
@@ -24,6 +36,7 @@ h1 {
 .nested-form-group {
   display: flex;
   gap: 10px;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -48,19 +61,36 @@ label {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 10px;
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
+.btn-remove {
+  background-color: #dc3545;
+}
+
+.btn-remove:hover {
+  background-color: #c82333;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
 .btn-primary {
   width: 100%;
 }
 
-.api-file-container {
-  position: relative;
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .api-file {
@@ -82,4 +112,11 @@ label {
 .copy-success {
   color: green;
   margin-top: 10px;
+}
+
+.request-group {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
